@@ -62,7 +62,6 @@ public class Tela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200, 200));
         setLocationByPlatform(true);
-        setMaximumSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(23, 25, 63));
 
