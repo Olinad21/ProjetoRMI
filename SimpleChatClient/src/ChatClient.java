@@ -4,7 +4,8 @@
     public class ChatClient  extends UnicastRemoteObject implements ChatClientInt{
     	
     	private String name;
-    	private Tela ui;	
+    	private TelaIni ui;	
+        
     	public ChatClient (String n) throws RemoteException {
     		name=n;
     		}
@@ -17,7 +18,7 @@
     		return name;
     	}
     	
-    	public void setGUI(Tela t){ 
+    	public void setGUI(TelaIni t){ 
     		ui=t ; 
-    	} 	
+    	} 
     }

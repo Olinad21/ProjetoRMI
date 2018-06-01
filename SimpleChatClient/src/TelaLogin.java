@@ -42,7 +42,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         txtNome = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Entrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,11 +72,11 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Waree", 1, 14)); // NOI18N
         jLabel1.setText("Nome");
 
-        jButton1.setText("Entrar");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Entrar.setText("Entrar");
+        Entrar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        Entrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                EntrarActionPerformed(evt);
             }
         });
 
@@ -89,7 +89,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(Entrar))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -100,7 +100,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addComponent(jButton1)
+                .addComponent(Entrar)
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
@@ -157,9 +157,9 @@ public class TelaLogin extends javax.swing.JFrame {
 public String nome(String nome){
     return nome;
 }
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
         // TODO add your handling code here:
-        boolean conetado;
+        boolean conetado = false;
         nome = txtNome.getText();
         
         
@@ -179,7 +179,7 @@ public String nome(String nome){
 
             System.out.println("Entrou aqui ");
             //verifica conexao
-            Tela tela = new Tela();
+            TelaIni tela = new TelaIni();
             conetado = tela.doConnect(nome);
 
             //se tiver conectado 
@@ -195,7 +195,7 @@ public String nome(String nome){
             }
 
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_EntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,7 +233,7 @@ public String nome(String nome){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Entrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
