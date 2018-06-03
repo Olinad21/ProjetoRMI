@@ -29,17 +29,17 @@ public class TelaIni extends javax.swing.JFrame {
      */
     public TelaIni() {
         initComponents();
-        tx.setBackground(new Color(129, 184, 211));
+        tx.setBackground(new Color(42,52,56));
+        jPanelArea.setBackground(new Color(42,52,56));
         tf.setVisible(false);
         lbARQ.setVisible(false);
         btEnviar.setVisible(false);
-        Dimension d4 =new Dimension();
-        d4.setSize(180, 474);
         
-        jPanel1.setPreferredSize(d4);
+        
+       
       //  jPanel1.setSize(180, 474);
-        d4.setSize(505, 100);
-        JPanelPerfil.setSize(d4);
+      
+      
         
        
 
@@ -63,7 +63,7 @@ public class TelaIni extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         lst = new javax.swing.JList<>();
-        JPanelPerfil = new javax.swing.JPanel();
+        jpanelPerfil = new javax.swing.JPanel();
         lbIcon = new javax.swing.JLabel();
         lbPerfil = new javax.swing.JLabel();
         lbNome = new javax.swing.JLabel();
@@ -72,6 +72,7 @@ public class TelaIni extends javax.swing.JFrame {
         tf = new javax.swing.JTextField();
         btEnviar = new javax.swing.JButton();
         lbARQ = new javax.swing.JLabel();
+        jPanelArea = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tx = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -82,7 +83,7 @@ public class TelaIni extends javax.swing.JFrame {
         setLocation(new java.awt.Point(200, 200));
         setLocationByPlatform(true);
 
-        jPanel1.setBackground(new java.awt.Color(129, 184, 211));
+        jPanel1.setBackground(new java.awt.Color(42, 52, 56));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel1MouseClicked(evt);
@@ -91,7 +92,7 @@ public class TelaIni extends javax.swing.JFrame {
 
         jScrollPane2.setOpaque(false);
 
-        lst.setBackground(new java.awt.Color(129, 184, 211));
+        lst.setBackground(new java.awt.Color(42, 52, 56));
         lst.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         lst.setFont(new java.awt.Font("Ubuntu", 1, 16)); // NOI18N
         lst.setForeground(new java.awt.Color(242, 238, 238));
@@ -107,7 +108,7 @@ public class TelaIni extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(lst);
 
-        JPanelPerfil.setBackground(new java.awt.Color(63, 59, 113));
+        jpanelPerfil.setBackground(new java.awt.Color(29, 31, 43));
 
         lbIcon.setForeground(new java.awt.Color(254, 254, 254));
         lbIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/userP.png"))); // NOI18N
@@ -120,29 +121,29 @@ public class TelaIni extends javax.swing.JFrame {
         lbNome.setForeground(new java.awt.Color(254, 254, 254));
         lbNome.setText("NOME");
 
-        javax.swing.GroupLayout JPanelPerfilLayout = new javax.swing.GroupLayout(JPanelPerfil);
-        JPanelPerfil.setLayout(JPanelPerfilLayout);
-        JPanelPerfilLayout.setHorizontalGroup(
-            JPanelPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JPanelPerfilLayout.createSequentialGroup()
+        javax.swing.GroupLayout jpanelPerfilLayout = new javax.swing.GroupLayout(jpanelPerfil);
+        jpanelPerfil.setLayout(jpanelPerfilLayout);
+        jpanelPerfilLayout.setHorizontalGroup(
+            jpanelPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelPerfilLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(JPanelPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPanelPerfilLayout.createSequentialGroup()
+                .addGroup(jpanelPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpanelPerfilLayout.createSequentialGroup()
                         .addComponent(lbIcon)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lbNome))
                     .addComponent(lbPerfil))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        JPanelPerfilLayout.setVerticalGroup(
-            JPanelPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JPanelPerfilLayout.createSequentialGroup()
-                .addGroup(JPanelPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPanelPerfilLayout.createSequentialGroup()
+        jpanelPerfilLayout.setVerticalGroup(
+            jpanelPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelPerfilLayout.createSequentialGroup()
+                .addGroup(jpanelPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpanelPerfilLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lbIcon)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanelPerfilLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpanelPerfilLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbNome)
                         .addGap(18, 18, 18)))
@@ -154,6 +155,7 @@ public class TelaIni extends javax.swing.JFrame {
         jSeparator1.setFont(new java.awt.Font("Ubuntu", 1, 16)); // NOI18N
 
         btConversar.setText("Conversar");
+        btConversar.setToolTipText("Conversa Grupal");
         btConversar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btConversarActionPerformed(evt);
@@ -167,7 +169,8 @@ public class TelaIni extends javax.swing.JFrame {
             }
         });
 
-        lbARQ.setText("ARQ");
+        lbARQ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/anexo.png"))); // NOI18N
+        lbARQ.setToolTipText("Enviar Anexo");
 
         jScrollPane3.setBackground(new java.awt.Color(129, 184, 211));
         jScrollPane3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 184, 211)));
@@ -184,6 +187,23 @@ public class TelaIni extends javax.swing.JFrame {
         tx.setOpaque(false);
         jScrollPane3.setViewportView(tx);
 
+        javax.swing.GroupLayout jPanelAreaLayout = new javax.swing.GroupLayout(jPanelArea);
+        jPanelArea.setLayout(jPanelAreaLayout);
+        jPanelAreaLayout.setHorizontalGroup(
+            jPanelAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAreaLayout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(jScrollPane3)
+                .addGap(3, 3, 3))
+        );
+        jPanelAreaLayout.setVerticalGroup(
+            jPanelAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAreaLayout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(jScrollPane3)
+                .addGap(3, 3, 3))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -194,38 +214,37 @@ public class TelaIni extends javax.swing.JFrame {
                     .addComponent(jSeparator1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JPanelPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jpanelPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btConversar, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(12, 12, 12)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(tf)
+                                        .addComponent(tf, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lbARQ))
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE))))
+                                        .addComponent(lbARQ, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jPanelArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(JPanelPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpanelPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+                    .addComponent(jPanelArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btEnviar)
-                    .addComponent(lbARQ)
+                    .addComponent(lbARQ, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btConversar))
                 .addGap(23, 23, 23))
@@ -257,9 +276,10 @@ public class TelaIni extends javax.swing.JFrame {
 
     private void btConversarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConversarActionPerformed
         // TODO add your handling code here:
-        if (btConversar.getText().equals("Conversar")) {
+        if (btConversar.getText().equalsIgnoreCase("Conversar")) {
             btConversar.setText("voltar");
             tx.setBackground(Color.WHITE);
+            jPanelArea.setBackground(new Color(200, 200, 200));
             tx.setForeground(Color.BLACK);
             tf.setVisible(true);
             btEnviar.setVisible(true);
@@ -269,10 +289,13 @@ public class TelaIni extends javax.swing.JFrame {
 //            t.show();
 
         }
+        
         else {
-             tx.setForeground(new Color(129, 184, 211));
+            tx.setBackground(new Color(42,52,56));
+            tx.setForeground(new Color(42,52,56));
+            jpanelPerfil.setBackground(new Color(29,31,43));
             btConversar.setText("Conversar");
-            tx.setBackground(new Color(129, 184, 211));
+            jPanelArea.setBackground(new Color(42,52,56));
             tf.setVisible(false);
             btEnviar.setVisible(false);
             lst.setForeground(new Color(254, 254, 254)); 
@@ -285,19 +308,11 @@ public class TelaIni extends javax.swing.JFrame {
     private void btEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEnviarActionPerformed
         // TODO add your handling code here:
         // TODO add your handling code here:
-        System.out.println("TEXTOSE :"+tx.getSelectedText());
+        
         String texto = tf.getText();
-        if (!texto.isEmpty()) {
-            
+        if (!texto.isEmpty()) {            
             if(lst.getSelectedValue()!=null){
                 sendText(lst.getSelectedValue());
-                String tx;                
-                try {
-                    tx = "["+client.getName() +"]" + tf.getText();
-                } catch (RemoteException ex) {
-                    Logger.getLogger(TelaIni.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                
                 System.out.println("vou mandar para "+lst.getSelectedValue());
             }
             else{
@@ -310,16 +325,18 @@ public class TelaIni extends javax.swing.JFrame {
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         // TODO add your handling code here:
+        jPanelArea.setBackground(new Color(42,52,56));
         btConversar.setText("Conversar");
         lst.clearSelection();
-        tx.setBackground(new Color(129, 184, 211));
-        tx.setForeground(new Color(129, 184, 211));
+        tx.setBackground(new Color(42,52,56));
+        tx.setForeground(new Color(42,52,56));
         tf.setVisible(false);
         lbARQ.setVisible(false);
         btEnviar.setVisible(false);
        // lst.setForeground(new Color(254, 254, 254)); 
         //lst.setOpaque(true);
         lbNome.setText(nomeOrigin);
+        jpanelPerfil.setBackground(new Color(29,31,43));
         
        
     }//GEN-LAST:event_jPanel1MouseClicked
@@ -331,13 +348,15 @@ public class TelaIni extends javax.swing.JFrame {
         if(!lst.getSelectedValue().isEmpty()){
             
             lbNome.setText(lst.getSelectedValue());
-            JPanelPerfil.setBackground(new Color(57,51,129));
+            jpanelPerfil.setBackground(new Color(57,51,129));
             
             tx.setBackground(Color.WHITE);
+            jPanelArea.setBackground(new Color(200, 200, 200));
             tx.setForeground(new Color(0, 0, 0));
             tf.setVisible(true);
             lbARQ.setVisible(true);
             btEnviar.setVisible(true);
+            btConversar.setText("voltar");
             //lst.setForeground(new Color(129, 184, 211)); 
             //lst.setOpaque(false);
 //            TelaConversa conversar = new TelaConversa(lst.getSelectedValue(),nomeOrigin);
@@ -456,10 +475,44 @@ public class TelaIni extends javax.swing.JFrame {
                
                // updateUsers(server.getConnected());
                 
-                List<ChatClientInt> listCLIente = getServer().getConnected();
-                for (int i =0; i<listCLIente.size();i++) {
-                    ChatClientInt tmp = (ChatClientInt) listCLIente.get(i);
-                       updateUsers(getServer().getConnected());
+//                List<ChatClientInt> listCLIente = getServer().getConnected();
+//                for (int i =0; i<listCLIente.size();i++) {
+//                    ChatClientInt tmp = (ChatClientInt) listCLIente.get(i);
+//                    updateUsers(getServer().getConnected());
+//                }
+                
+                
+                int tam = getServer().getConnected().size();
+                List<ChatClientInt> listCLIente = null;
+                System.out.println("HAAAAAAAA "+tam);
+                if(tam>1){
+                   
+                    listCLIente = getServer().getConnected();
+                    int c=0;
+                    for (int i =0; i<listCLIente.size();i++) {
+                        
+                        //ChatClientInt tmp = (ChatClientInt) listCLIente.get(i);
+                        updateUsers(getServer().getConnected());
+                        
+                        if(listCLIente.get(i).getName().equals(client.getName())){
+                           
+                            System.out.println("Nomes iguais");
+                            c++;
+                            if(c>1){
+                                c++;
+                                System.out.println("OPA IGUAL"+c);
+                                JOptionPane.showMessageDialog(null, "Cliente já exite com esse nick");
+                                server.sair(client);
+                                return false;
+                            }
+
+                        }
+                    }
+                   
+                }
+                else if(tam==1){
+                    updateUsers(getServer().getConnected());
+
                 }
                 
                 
@@ -495,10 +548,9 @@ public class TelaIni extends javax.swing.JFrame {
         }
     }
     
-    public void sendText(String nome) {
-        
+    public void sendText(String nome) {        
         if (isConectado()==false) {
-            JOptionPane.showMessageDialog(frame, "You need to connect first.");           
+            JOptionPane.showMessageDialog(frame, "conecte-se primeiro");           
         }
         String st = tf.getText();
         st = "[" + lbNome.getText()+ "] " + st;
@@ -514,6 +566,7 @@ public class TelaIni extends javax.swing.JFrame {
     public void writeMsg(String st) {
         if (!tx.getText().isEmpty()){
             tx.setBackground(Color.WHITE);
+            jPanelArea.setBackground(new Color(240,240,240));
             tx.setForeground(new Color(0, 0, 0));
             tx.setText(tx.getText() + "\n" + st);
         }
@@ -521,7 +574,7 @@ public class TelaIni extends javax.swing.JFrame {
              tx.setText(st);
         }
         
-        System.out.println("JOGUEI NOME NO TX");
+        System.out.println("JOGUEI NO txArea");
     }
 
     public void updateUsers(List<ChatClientInt> v) {
@@ -543,22 +596,25 @@ public class TelaIni extends javax.swing.JFrame {
                 lst.setModel(listModel);
             }
         }
+        else
+            lst.setModel(listModel);
        
         
     }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel JPanelPerfil;
     private javax.swing.JMenu Perfil;
     private javax.swing.JButton btConversar;
     private javax.swing.JButton btEnviar;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanelArea;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPanel jpanelPerfil;
     private javax.swing.JLabel lbARQ;
     private javax.swing.JLabel lbIcon;
     private javax.swing.JLabel lbNome;

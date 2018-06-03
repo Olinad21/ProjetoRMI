@@ -39,12 +39,14 @@ public class ChatServer extends UnicastRemoteObject implements ChatServerInt, Se
     }
 
     @Override
-    public void sair(String nome) throws RemoteException {
-        System.out.println(nome);
-        for (int i = 0; i < getV().size(); i++) {
-            publish(nome + " está offline");
-            if (getV().get(i).getName().equals(nome)) {
-                getV().remove(i);
+    public void sair(ChatClientInt client) throws RemoteException {
+        System.out.println(client.getName());
+        for (int i = 0; i < getV().size(); i++) {   
+            //ChatClientInt clientes = (ChatClientInt) getV().get(i);            
+            if (getV().get(i).getName().equals(client.getName())) {
+                getV().remove(client);
+                //clientes.tell(client.getName() + " está offline");
+                getConnected();
             }
         }
     }
@@ -73,11 +75,12 @@ public class ChatServer extends UnicastRemoteObject implements ChatServerInt, Se
             if (getV().get(i).getName().equals(nome)) {
                 //System.out.println("vetor   name: " + getV().get(i).getName());                
                 try {
-                    ChatClientInt tmp = (ChatClientInt) getV().get(i);
-                    tmp.tell(texto);
+                    ChatClientInt clientes = (ChatClientInt) getV().get(i);
+                    clientes.tell(texto);
                     client.tell(texto);
 
                 } catch (Exception e) {
+                    System.out.println("Erro ao Transferir msg para clientes"+e.getMessage());
                     //problem with the client not connected.
                     //Better to remove it
                 }

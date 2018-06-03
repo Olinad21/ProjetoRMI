@@ -11,5 +11,5 @@ public interface ChatServerInt extends Remote {
 
     public List getConnected() throws RemoteException;
 
-    public void sair(String nome) throws RemoteException;
+    public void sair(ChatClientInt client) throws RemoteException;
 }
