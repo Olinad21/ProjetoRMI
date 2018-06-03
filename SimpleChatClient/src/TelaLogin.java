@@ -1,4 +1,3 @@
-
 import java.awt.Color;
 
 /*
@@ -177,7 +176,7 @@ public String nome(String nome){
         //se o nome tiver de acordo
         else {
 
-            System.out.println("Entrou aqui ");
+            System.out.println("Entrou aqui Tela de Login");
             //verifica conexao
             TelaIni tela = new TelaIni();
             conetado = tela.doConnect(nome);
@@ -222,6 +221,7 @@ public String nome(String nome){
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
