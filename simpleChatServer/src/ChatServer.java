@@ -1,3 +1,6 @@
+
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.Serializable;
 import java.rmi.*;
 import java.rmi.server.UnicastRemoteObject;
@@ -6,8 +9,40 @@ import java.util.*;
 public class ChatServer extends UnicastRemoteObject implements ChatServerInt, Serializable {
 
     private List<ChatClientInt> v = new ArrayList<>();
+    private String file = "";
 
     public ChatServer() throws RemoteException {
+    }
+
+    public void setFile(String f) {
+        file = f;
+    }
+
+    public void getArquivo(ChatClientInt client) {
+        System.out.println("[Arquivo]: caminho :" + file);
+        try {
+
+            File f1 = new File(file);
+            //f1.canExecute();
+            FileInputStream in = new FileInputStream(f1);
+            byte[] mydata = new byte[(int) file.length()];
+            int mylen = in.read(mydata);
+
+         for (int i = 0; i < getV().size(); i++) {
+            while (mylen > 0) {
+                 ChatClientInt clientes = (ChatClientInt) getV().get(i);
+                 clientes.sendData(f1.getName(), mydata, mylen);
+                //client.sendData(f1.getPath(), mydata, mylen);
+
+            }
+         }
+//            while(mylen>0){
+//                a.sendData(f1.getName(), mydata, mylen);	 
+//                mylen=in.read(mydata);				 
+//            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean login(ChatClientInt a) throws RemoteException {
@@ -41,7 +76,7 @@ public class ChatServer extends UnicastRemoteObject implements ChatServerInt, Se
     @Override
     public void sair(ChatClientInt client) throws RemoteException {
         System.out.println(client.getName());
-        for (int i = 0; i < getV().size(); i++) {   
+        for (int i = 0; i < getV().size(); i++) {
             //ChatClientInt clientes = (ChatClientInt) getV().get(i);            
             if (getV().get(i).getName().equals(client.getName())) {
                 getV().remove(client);
@@ -80,7 +115,7 @@ public class ChatServer extends UnicastRemoteObject implements ChatServerInt, Se
                     client.tell(texto);
 
                 } catch (Exception e) {
-                    System.out.println("Erro ao Transferir msg para clientes"+e.getMessage());
+                    System.out.println("Erro ao Transferir msg para clientes" + e.getMessage());
                     //problem with the client not connected.
                     //Better to remove it
                 }

@@ -1,10 +1,6 @@
 import java.awt.Color;
-import java.awt.Dimension;
 import java.rmi.Naming;
-import java.rmi.RemoteException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -171,6 +167,12 @@ public class TelaIni extends javax.swing.JFrame {
 
         lbARQ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/anexo.png"))); // NOI18N
         lbARQ.setToolTipText("Enviar Anexo");
+        lbARQ.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbARQ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbARQMouseClicked(evt);
+            }
+        });
 
         jScrollPane3.setBackground(new java.awt.Color(129, 184, 211));
         jScrollPane3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 184, 211)));
@@ -366,6 +368,12 @@ public class TelaIni extends javax.swing.JFrame {
        
     }//GEN-LAST:event_lstMouseClicked
 
+    private void lbARQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbARQMouseClicked
+        // TODO add your handling code here:
+        sendFile(client);
+        
+    }//GEN-LAST:event_lbARQMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -459,6 +467,27 @@ public class TelaIni extends javax.swing.JFrame {
 //
 //        return conectado;
 //    }
+    
+    public void sendFile(ChatClientInt client){
+        //ChatClient c=new ChatClient("imed");			
+			//ChatServerInt server=(ChatServerInt)Naming.lookup("rmi://192.168.1.7/abc");
+			//server.login(c);
+//			//System.out.println("Listening.....");			
+//			Scanner s=new Scanner(System.in);			
+//			while(true){
+//				String line=s.nextLine();
+//			}
+        //if (tf != null) {
+          
+            
+            try {
+                server.getArquivo(client);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+       // }
+    }
+    
     public String nomeOrigin;
     public boolean doConnect(String nome) {
         this.nomeOrigin = nome;
